@@ -5,14 +5,16 @@
 }
 section{
     display: grid;
-    grid-template-columns: auto auto auto ;
-    grid-template-rows: auto auto auto;
-    gap: 5px;
-    justify-content: center;
+    grid-template-columns: repeat(3, 400px);
+    gap: 2px;
     margin: .5em;
 }
 article{
     position: relative;
+}
+img{
+    display: block;
+    width: max-content;
 }
 .overlay{
     position: absolute;
@@ -35,4 +37,14 @@ section, .text{
     left: 50%;
     transform: translate(-50%,-50%);
     color: #fff;
+}
+@media (max-width: 1300px){
+    section{
+        grid-template-columns: repeat(2, 400px);
+    }
+}
+@media (max-width: 980px){
+    section{
+        grid-template-columns: 400px;
+    }
 }
